@@ -315,6 +315,65 @@
 //     echo $a.' , ';
 
 // }
-asdasdasdasd
+// function asanbiamoz($name="hossein"){
+//   echo $name.',';
+// }
+// asanbiamoz('ali');
+// asanbiamoz('mohsen');
+// asanbiamoz();
+
+// function firstfunction($n){
+//     if($n > 0){
+//         return $n*firstfunction($n-1);
+//     }
+//     return 1;
+// }
+// echo firstfunction(3);
+// echo "<br>";
+// echo firstfunction(0);
+// $GLOBALS
+// $_SERVER
+// $_GET
+// $_POST
+// $_COOKIE
+// $_FILES
+// $_ENV
+// $_REQUEST
+// $_SESSION
+
+
+// echo $_SERVER['PHP_SELF']; 
+// echo "<br>";
+// echo $_SERVER['SERVER_NAME'];
+// echo "<br>";
+// echo $_SERVER['HTTP_HOST'];
+// echo "<br>";
+// echo $_SERVER['SERVER_ADDR'];
+// echo "<br>";
+// echo $_SERVER['HTTP_USER_AGENT'];
+// echo "<br>";
+// echo $_SERVER['SCRIPT_NAME'];
+// echo "<br>";
+if(isset($_REQUEST['name']))
+{
+    $name = $_REQUEST['name'];
+    echo $name;
+}
+
 
  ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="get">
+        <input type="text" name="name">
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>
