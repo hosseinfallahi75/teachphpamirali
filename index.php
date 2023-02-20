@@ -354,14 +354,91 @@
 // echo "<br>";
 // echo $_SERVER['SCRIPT_NAME'];
 // echo "<br>";
-if(isset($_REQUEST['name']))
-{
-    $name = $_REQUEST['name'];
-    echo $name;
-}
+// if(isset($_REQUEST['name']))
+// {
+//     $name = $_REQUEST['name'];
+//     echo $name;
+// }
+// if(isset($_POST['name'])){
+//     $age = $_POST['name'];
+//     echo $age;
+// }
+// if(isset($_GET['name'])){
+//     $name = $_GET['name'];
+//     echo $name;
+// }
+// setcookie(اسم کوکی,مقدار کوکی,زمان اتقضا)
+// $cookies = "amirali";
+// $cook = setcookie("name","$cookies",time()+3600);
+// echo $cook;
+// if(isset($_GET['name'])){
+//     $name = $_GET['name'];
+//     setcookie("name","$name",time()+60);
+//     echo "welcome $name" . "<br>" . "please reopen page";
+// }
+// elseif(isset($_COOKIE['name']))
+// {
+//     echo $_COOKIE['name']. "<br>" . "is read cookie";
+// }
+
+// $_FILES
+
+// $_ENV
+// $_SESSION
+// session_start();
+// if(isset($_GET['name']))
+// {
+//     $name = $_GET['name'];
+//     $_SESSION['fname'] = $name;
+//     header("location:login.php");
+// }
+// elseif(isset($_SESSION['fname']))
+// {
+// echo "welcome : ".$_SESSION['fname']."<br>";
+
+// <!-- // <a href="?action=logout">logout</a> -->
+
+// }
+// if(isset($_GET['action']) && $_GET['action']=='logout')
+//  {
+//     session_destroy();
+//     header("location:login.php");
+//  }
+
+// include("./login.php");
+// require("./login.php");
+
+// include_once("./login.php");
+// require_once("./login.php");
+//  echo $_SESSION['fname'];
+// teachphpamirami/login/login.php
+
+// c:\home\mydocs\data.txt;
+
+// teachphpamirali\\login\\login.php
+// r
+// r+
+// w
+// w+
+// a
+// a+
+
+$fil = fopen('user.txt',"r");
+$data = fread($fil,8);
+echo $data;
+// if(!$fil) die("cannot open the file");
+
+// $file = fopen("user.txt","w");
+// fclose($file);
+
+// echo "<pre>";
+// print_r(stat("./login.php"));
+// echo "</pre>";
+
 
 
  ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -372,7 +449,7 @@ if(isset($_REQUEST['name']))
 </head>
 <body>
     <form action="" method="get">
-        <input type="text" name="name">
+        <input type="text" name="name"><br>
         <input type="submit" value="submit">
     </form>
 </body>
