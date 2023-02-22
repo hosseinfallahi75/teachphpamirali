@@ -341,8 +341,7 @@
 // $_REQUEST
 // $_SESSION
 
-
-// echo $_SERVER['PHP_SELF']; 
+// echo $_SERVER['PHP_SELF'];
 // echo "<br>";
 // echo $_SERVER['SERVER_NAME'];
 // echo "<br>";
@@ -423,9 +422,9 @@
 // a
 // a+
 
-$fil = fopen('user.txt',"r");
-$data = fread($fil,8);
-echo $data;
+// $fil = fopen('user.txt',"r");
+// $data = fread($fil,8);
+// echo $data;
 // if(!$fil) die("cannot open the file");
 
 // $file = fopen("user.txt","w");
@@ -434,10 +433,145 @@ echo $data;
 // echo "<pre>";
 // print_r(stat("./login.php"));
 // echo "</pre>";
+// the message
+
+// $_FILES["fileToUpload"]["name"]     نام فایل اپلود شده
+// $_FILES["fileToUpload"]["type"]     نوع فایل ارسال شده image/gif image/svg
+// $_FILES["fileToUpload"]["size"]    اندازه فایل اپلود شده 
+// $_FILES["fileToUpload"]["tmp_name"]    نام فایل موقت دارای فایل اپلود شده 
+// $_FILES["fileToUpload"]["error"]    کد خطا ایجاد شده هنگام اپلود
 
 
 
- ?>
+// $target_dir = "uploads/";
+// $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+// $uploadOk = 1;
+// $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENTION));
+
+// if(isset($_POST["submit"]))
+// {
+//    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+//    if($check !== false){
+//       echo "file is an image - " .$check["mime"] . ".";
+//       $uploadOk = 1;
+//    }
+//    else 
+//    {
+//       echo "file is not an image";
+//       $uploadOk = 0;
+//    }
+
+// }
+
+// if(file_exists($target_file))
+// {
+//    echo "sorry, file already exist";
+//    $uploadOk = 0;
+// }
+// if($_FILES["fileToUpload"]["size"] > 500000){
+//    echo "sory you file is too large";
+//    $uploadOk = 0;
+// }
+
+// if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif")
+// {
+//    echo "sorry only jpg jpeg png gif file are allowed";
+// }
+// if($uploadOk == 0){
+//    echo "sory you file was not uploaded .";
+// }
+// else{
+//    if(move_uploaded_file($_FILES["fileToUpload"]["tmp_name"],$target_file )){
+//       echo "the file " .htmlspecialchars(basename($_FILES["fileToUpload"]["name"])). "has been uploaded .";
+//    }else{
+//       echo "sorry there was an error uploading your file";
+//    }
+// }
+
+// $to = "hossein.fallahi75programmer@gmail.com";
+// $subject = "khobi";
+// $message = "soory there was an error uloading";
+// $from = "hossein.fallahi75programmer@gmail.com";
+// $header = "From:" . $from;
+// if(mail($to,$subject,$message,$header)){
+//    echo "ایمیل ارسال شد";
+
+// }else{
+//    echo "ایمیل ارسال نشد";
+
+// }
+// class human{
+//    private $name;
+//    private $age;
+//    private $family;
+//    // public function __construct(){
+//    //    echo "amirali"."<br>";
+//    // }
+//    public function __destruct(){
+//       echo "class in being destroyed";
+//    }
+//    function set($nam,$sen,$subnam){
+//       $this->name = $nam;
+//       $this->family = $subnam;
+//       $this->age   = $sen;
+//    }
+
+//    function get(){
+//          echo "your name : " .$this->name."<br>";
+//          echo "your subname : " .$this->family."<br>";
+//          echo "your age : " .$this->age."<br>";
+//    }
+
+// }
+
+// $mohsen = new human();
+// $mohsen = NULL;
+// // unset($mohsen); 
+// $mohsen->set('mohsen','26','fallahi');
+// $mohsen->get();
+// echo "<hr>";
+// $ali = new human(); 
+// $ali->set('ali','11','sss');
+// $ali->get();
+
+// self::
+// parent::
+
+
+// class human {
+//    // private $name;
+//    // public function s(){
+//    //    echo "welcome ali";
+//    // }
+//    static public $name;
+//    static public function s(){
+//       echo "welcome"."<br>";
+//       self::$name="mohsen";
+//       echo self::$name."<br>";
+
+//    }
+// }
+// $mohsen = new human();
+// $mohsen->s();
+// human::s();
+// echo human::$name;
+class human{
+   static $name;
+   static public function s(){
+      self::$name = "ahmad";
+   }
+}
+class humantwo extends human{
+   const i = 100;
+   function sd(){
+      parent::s();
+      echo parent::$name."<br>";
+      echo self::i;
+   }
+}
+$a = new humantwo();
+$a->sd();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -446,11 +580,15 @@ echo $data;
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- <form action="" method="post" enctype="multipart/form-data">
+      <label for="">uploaded image</label>
+      <input type="file" name="fileToUpload" id="fileToUpload">
+      <input type="submit" value="upload" name="submit">
+    </form> -->
+
 </head>
 <body>
-    <form action="" method="get">
-        <input type="text" name="name"><br>
-        <input type="submit" value="submit">
-    </form>
+
+  
 </body>
 </html>

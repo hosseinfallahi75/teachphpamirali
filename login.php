@@ -1,3 +1,5 @@
 <?php
-echo "login";
+$index = new main();
+$index->index;
+
 ?>
