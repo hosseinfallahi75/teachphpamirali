@@ -555,22 +555,158 @@
 // $mohsen->s();
 // human::s();
 // echo human::$name;
-class human{
-   static $name;
-   static public function s(){
-      self::$name = "ahmad";
-   }
-}
-class humantwo extends human{
-   const i = 100;
-   function sd(){
-      parent::s();
-      echo parent::$name."<br>";
-      echo self::i;
-   }
-}
-$a = new humantwo();
-$a->sd();
+// class human{
+//    static $name;
+//    static public function s(){
+//       self::$name = "ahmad";
+//    }
+// }
+// class humantwo extends human{
+//    const i = 100;
+//    function sd(){
+//       parent::s();
+//       echo parent::$name."<br>";
+//       echo self::i;
+//    }
+// }
+// $a = new humantwo();
+// $a->sd();
+// class human{
+//    const i = 10;
+//    public function s(){
+//       for($r=0;$r<=self::i;$r++){
+//          echo $r."<br>";
+//       }
+//    }
+// }
+// $a = new human();
+// $a->s();
+
+
+// class person{
+//    public $name;
+//    public $family;
+//    function printt(){
+//       echo "Name :" .$this->name."<br>";
+//       echo "Family :" .$this->family."<br>";
+//    }
+// }
+
+// class student extends person{
+//    public $studentid;
+//    function get(){
+//       echo "ID :".$this->studentid."<br>";
+//    }
+// }
+// $a = new student();
+// $a->name="ali";
+// $a->family="fallahi";
+// $a->studentid="122";
+// $a->get();
+// $a->printt();
+
+// final class baseclass{
+//    public function test(){
+//       echo "base class";
+//    }
+// }
+// class s extends baseclass{
+//    public function ali(){
+//       echo "ali";
+//    }
+// }
+// $a = new s();
+
+
+// class person{
+//    public function test($name){
+//       echo "my name is $name"."<br>";
+//    }
+// }
+// class two extends person{
+//    public function test($age){
+//       echo "age : $age"."<br>";
+//    }
+// }
+// $a = new two();
+// $a->test("19");
+// $b = new person();
+// $b->test("mohsen");
+// class person{
+//    function display(){
+//       echo "simpleclass"."<br>";
+//    }
+// }
+// class human extends person{
+//    function display(){
+//       parent::display();
+//       echo "extends class"."<br>";
+//    }
+// }
+// $a = new human();
+// $a->display();
+
+
+// class person{
+//    function display(){
+//       echo "class persona"."<br>";
+//    }
+// }
+// class human extends person{
+//    function display(){
+//       echo "class extends"."<br>";
+//    }
+// }
+// $a = new human();
+// if($a instanceof person)
+// {
+//    echo "a instance of person"."<br>";
+// }
+// if($a instanceof human)
+// {
+//    echo 'a instance of human';
+// }
+
+
+// class test{
+//    function __construct(){
+//       echo "welcome";
+//    }
+   
+// }
+// class exten extends test{
+//    public function create(){
+//       echo "create";
+//    }
+//    function __construct(){
+//       echo "wellcome2";
+//    }
+// }
+
+// $a = new exten();
+
+// interface test{
+//    public function input($a,$b);
+//    public function display();
+// }
+// class zarb implements test{
+//    private $one;
+//    private $two;
+//    private $sum;
+//    public function input($a,$b){
+//       $this->one = $a;
+//       $this->two = $b;
+//    }
+
+//    public function display(){
+//       $this->sum = $this->one+$this->two;
+//       echo 'sum' .$this->one.'and'.$this->two.':'.$this->sum;
+//    }
+// }
+// $a = new zarb();
+// $a->input('46','54');
+// $a->display();
+
 ?>
 
 <!DOCTYPE html>
