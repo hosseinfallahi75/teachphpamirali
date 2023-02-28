@@ -709,6 +709,7 @@
 
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -716,15 +717,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- <form action="" method="post" enctype="multipart/form-data">
-      <label for="">uploaded image</label>
-      <input type="file" name="fileToUpload" id="fileToUpload">
-      <input type="submit" value="upload" name="submit">
-    </form> -->
+    <style>
+      input{
+        margin-bottom:20px
+      }
+     
+    </style>
+   
 
 </head>
 <body>
-
+<form action="./check.php" method="post" enctype="multipart/form-data">
+      <label for="">name</label>
+      <input type="text" name="name"><br>
+      <label for="">family</label>
+      <input type="text" name="family"><br>
+      <label for="">email</label>
+      <input type="email" name="email"><br>
+      <label for="">phone</label>
+      <input type="number" name="phone"><br>
+      <input type="submit" value="register">
+    </form>
   
 </body>
 </html>
