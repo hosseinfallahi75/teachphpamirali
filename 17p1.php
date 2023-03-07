@@ -27,7 +27,7 @@
   <script src="./jquery.min.js"></script>
   <script>
   function send(){
-    $.post('17-1p2.php',{name:document.getElementById("f").value},function(data){
+    $.post('17-1p2.php',{name:document.getElementById("dbl").value},function(data){
       $('#s').html(data);
     })
   }
@@ -35,10 +35,8 @@
 </script>
 </head>
 <body>
-  <label for="">test</label>
-    <input type="text" onkeyup="send();" id="f">
-    <br>
     <div id="s"></div>
+   
 </body>
 
 </html>
