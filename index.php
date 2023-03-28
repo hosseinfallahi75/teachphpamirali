@@ -23,6 +23,8 @@
   <title>ajax</title>
   <script src="./jquery.min.js"></script>
   <script>
+    var ali = [0,10,5,8];
+    ali.revers();
   function send(){
     $.post('ajax.php',{name:document.getElementById("f").value},function(data){
       $('#sss').html(data);
